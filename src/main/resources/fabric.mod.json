@@ -3,20 +3,20 @@
 	"id": "end-mod",
 	"version": "${version}",
 	"name": "end-mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This a simple end mod",
 	"authors": [
-		"Me!"
+		"AK47are"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/AK47are/minecraft-end-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/end-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"team.zhk.end.Endmod"
+			"team.zhk.end.EndMod"
 		]
 	},
 	"mixins": [

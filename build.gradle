@@ -26,7 +26,14 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+	// 添加 Junit 测试依赖
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+}
+
+test {
+	useJUnitPlatform()
 }
 
 processResources {
