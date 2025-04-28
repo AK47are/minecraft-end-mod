@@ -81,7 +81,7 @@ public class ModItems {
         //药水酿造配方
         BrewingRecipeRegistry.registerPotionRecipe(
                 Potions.AWKWARD,
-                Items.ENDER_PEARL,
+                ModItems.ENDER_PEARL_POWDER,
                 ModPotions.TELEPORTATION_POTION
         );
     }
