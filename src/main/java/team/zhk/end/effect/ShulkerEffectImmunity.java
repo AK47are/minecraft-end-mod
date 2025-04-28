@@ -13,7 +13,7 @@ public class ShulkerEffectImmunity extends StatusEffect {
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        return duration == 1;
+        return duration%20==0;
     }
 
     @Override

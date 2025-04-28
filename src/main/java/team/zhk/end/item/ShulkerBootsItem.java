@@ -1,5 +1,4 @@
 package team.zhk.end.item;
-//package com.example.classdesign.item.custom;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -21,9 +20,23 @@ public class ShulkerBootsItem extends ArmorItem {
 
         if (!world.isClient && entity instanceof PlayerEntity player) {
             // 检查是否穿上了鞋子
-            if (player.getEquippedStack(EquipmentSlot.FEET).isOf(this)) {
-                // 添加免疫效果
-                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.SHULKER_IMMUNITY, 200, 0, true, false));
+            boolean isWearingBoots = player.getEquippedStack(EquipmentSlot.FEET).isOf(this);
+
+            // 每10游戏刻（0.5秒）检查一次
+            if (world.getTime() % 10 == 0) {
+                if (isWearingBoots) {
+                    // 添加208刻（10.4秒）持续时间的效果，保证在状态时间跳转前更新状态，避免状态时间快速闪动
+                    player.addStatusEffect(new StatusEffectInstance(
+                            ModStatusEffects.SHULKER_IMMUNITY,
+                            208, // 10.4秒持续时间
+                            0,
+                            true,
+                            false
+                    ));
+                }
+                else if (player.hasStatusEffect(ModStatusEffects.SHULKER_IMMUNITY)) {
+                    player.removeStatusEffect(ModStatusEffects.SHULKER_IMMUNITY);
+                }
             }
         }
     }
