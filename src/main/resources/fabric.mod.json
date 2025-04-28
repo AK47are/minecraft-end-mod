@@ -5,7 +5,8 @@
 	"name": "end-mod",
 	"description": "This a simple end mod",
 	"authors": [
-		"AK47are"
+		"AK47are",
+		"Rc10111"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -17,6 +18,12 @@
 	"entrypoints": {
 		"main": [
 			"team.zhk.end.EndMod"
+		],
+		"client": [
+			"team.zhk.end.EndModClient"
+		],
+		"fabric-datagen": [
+			"team.zhk.end.EndModDataGenerator"
 		]
 	},
 	"mixins": [

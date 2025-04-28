@@ -1,0 +1,38 @@
+package team.zhk.end.world;
+
+import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import team.zhk.end.EndMod;
+
+import java.util.List;
+
+public class ModPlacedFeatures {
+    // public static final RegistryKey<PlacedFeature> VOID_BEACON_ORE_KEY_PLACEDKEY = registerKey("void_beacon_ore_placed");
+
+    public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
+        // 注释相关注册逻辑
+        /*
+        var configuredlookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        register(featureRegisterable, VOID_BEACON_ORE_KEY_PLACEDKEY, ...);
+        */
+    }
+
+    public static RegistryKey<PlacedFeature> registerKey(String id) {
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(EndMod.MOD_ID, id));
+    }
+
+    public static void register(
+            Registerable<PlacedFeature> featureRegisterable,
+            RegistryKey<PlacedFeature> key,
+            RegistryEntry<ConfiguredFeature<?, ?>> feature,
+            List<PlacementModifier> modifiers
+    ) {
+        featureRegisterable.register(key, new PlacedFeature(feature, List.copyOf(modifiers)));
+    }
+}
