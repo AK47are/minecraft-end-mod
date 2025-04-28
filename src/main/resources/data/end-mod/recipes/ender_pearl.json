@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "P": { "item": "end-mod:ender_pearl_powder" }
+  },
+  "result": {
+    "item": "minecraft:ender_pearl"
+  }
+}

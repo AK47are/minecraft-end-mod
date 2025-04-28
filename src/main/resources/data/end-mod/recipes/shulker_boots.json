@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    "E E",
-    "S S"
+    "S S",
+    "E E"
   ],
   "key": {
     "S": { "item": "minecraft:shulker_shell" },

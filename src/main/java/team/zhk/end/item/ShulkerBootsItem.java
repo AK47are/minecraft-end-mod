@@ -25,10 +25,10 @@ public class ShulkerBootsItem extends ArmorItem {
             // 每10游戏刻（0.5秒）检查一次
             if (world.getTime() % 10 == 0) {
                 if (isWearingBoots) {
-                    // 添加208刻（10.4秒）持续时间的效果，保证在状态时间跳转前更新状态，避免状态时间快速闪动
+                    // 添加218刻（10.9秒）持续时间的效果，保证在状态时间跳转前更新状态，避免状态时间快速闪动
                     player.addStatusEffect(new StatusEffectInstance(
                             ModStatusEffects.SHULKER_IMMUNITY,
-                            208, // 10.4秒持续时间
+                            218, // 10.9秒持续时间
                             0,
                             true,
                             false
