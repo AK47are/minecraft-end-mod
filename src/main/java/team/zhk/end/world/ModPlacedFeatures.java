@@ -5,22 +5,26 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import team.zhk.end.EndMod;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
-    // public static final RegistryKey<PlacedFeature> VOID_BEACON_ORE_KEY_PLACEDKEY = registerKey("void_beacon_ore_placed");
+     public static final RegistryKey<PlacedFeature> VOID_BEACON_ORE_KEY_PLACEDKEY = registerKey("void_beacon_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
         // 注释相关注册逻辑
-        /*
         var configuredlookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        register(featureRegisterable, VOID_BEACON_ORE_KEY_PLACEDKEY, ...);
-        */
+
+        register(featureRegisterable, VOID_BEACON_ORE_KEY_PLACEDKEY, configuredlookup.getOrThrow(ModConfiguredFeatures.VOID_BEACON_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(5,//矿脉密度 一区块内5个矿脉
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-50), YOffset.fixed(80))));
+
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String id) {
