@@ -3,7 +3,6 @@ package team.zhk.end.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;
