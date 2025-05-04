@@ -52,6 +52,7 @@ public class ModItems {
             new GaleBowItem(new FabricItemSettings()
                     .maxCount(1)
                     .rarity(Rarity.UNCOMMON)
+                    .maxDamage(384)//同原版弓相同
             )
     );
     //末影护腿注册
