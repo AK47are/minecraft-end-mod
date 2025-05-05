@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "EPE",
-    "BPB",
-    "B B"
+    " E ",
+    " P ",
+    " S "
   ],
   "key": {
+    "E": { "item": "end-mod:void_beacon" },
     "P": { "item": "end-mod:ender_ingot" },
-    "E": { "item": "minecraft:phantom_membrane" },
-    "B": { "item": "minecraft:leather" }
+    "S": { "item": "minecraft:stick" }
   },
   "result": {
-    "item": "end-mod:ender_cloak"
+    "count": 1,
+    "item": "end-mod:void_edge"
   }
 }

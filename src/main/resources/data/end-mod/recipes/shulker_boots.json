@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "pattern": [
     "S S",
     "E E"
   ],
   "key": {
-    "S": { "item": "minecraft:shulker_shell" },
-    "E": { "item": "end-mod:ender_ingot" }
+    "E": { "item": "minecraft:shulker_shell" },
+    "S": { "item": "end-mod:ender_ingot" }
   },
   "result": {
     "item": "end-mod:shulker_boots"

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "VP ",
+    "SEP",
+    "VP "
+  ],
+  "key": {
+    "E": { "item": "end-mod:void_beacon" },
+    "P": { "item": "minecraft:string" },
+    "S": { "item": "minecraft:stick" },
+    "V": { "item": "end-mod:ender_ingot" }
+  },
+  "result": {
+    "count": 1,
+    "item": "end-mod:gale_bow"
+  }
+}
