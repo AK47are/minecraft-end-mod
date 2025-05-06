@@ -2,6 +2,10 @@
 
 一个基于 fabric 框架的简单的末地模组。A simple End dimension mod built on the Fabric framework.
 
+## 使用
+
+准备一个我的世界游戏启动器 (如 PCL2）和我的世界 1.20.1 fabric 版本。下载 Realease 页面的最新版本，得到一个 jar 包。将其拖入游戏 mod 文件夹即可运行。
+
 ## 目的
 
 本项目是一个**学习项目**，用来研究如何打通项目之间的不同阶段。在项目 `docs` 中存放了课程的学习笔记和项目文档，给后来者参考。
